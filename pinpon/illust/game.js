@@ -8,11 +8,11 @@ Core : ゲーム本体
 */
 window.onload = function(){
 
-	GAMEN_WIDTH = 427;
-	GAMEN_HEIGHT = 640;
+	GAMEN_WIDTH = 624;
+	GAMEN_HEIGHT = 625;
 
 	game = new Game(GAMEN_WIDTH,GAMEN_HEIGHT);
-	game.preload(['pinpon.jpg','pinpon.mp3','blank.png']);
+	game.preload(['pinpon.png','pinpon.mp3','blank.png']);
 	game.fps = 12;
 	
 	game.onload = function(){
@@ -20,15 +20,15 @@ window.onload = function(){
 		var scene = game.rootScene;
 		
 		//チャイム画像表示
-		var pinpon = new Sprite(427,640);
-		pinpon.image = game.assets['pinpon.jpg'];
+		var pinpon = new Sprite(624,625);
+		pinpon.image = game.assets['pinpon.png'];
 		
 		//チャイムボタン
 		var button = new Sprite(64,64);
 		button.image = game.assets['blank.png'];
-		button.x = 200;
-		button.y = 150;
-		button.scale(2,2);
+		button.x = 385;
+		button.y = 420;
+		button.scale(1.5,1.5);
 		
 		var sound = null;
 		//チャイム音
